@@ -36,6 +36,7 @@ async def cusapicallkrishi(num, msg , deviceid):
         esponse = requests.post('https://thekrishi.com/v2/otp/get', params=params, headers=headers,
                                  data=data)
         response = esponse.json()
+        print(response)
         out = response["status"]
         if out == "success":
             return "success"

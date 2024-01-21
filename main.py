@@ -33,7 +33,7 @@ async def cusapicallkrishi(num, msg , deviceid):
         }
 
         data = f'--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb\r\nContent-Disposition: form-data; name="name"\r\nContent-Transfer-Encoding: binary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 4\r\n\r\ntera\r\n--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb\r\nContent-Disposition: form-data; name="country_code"\r\nContent-Transfer-Encoding: binary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 2\r\n\r\n91\r\n--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb\r\nContent-Disposition: form-data; name="phone_no"\r\nContent-Transfer-Encoding: binary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 10\r\n\r\n{num}\r\n--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb\r\nContent-Disposition: form-data; name="source"\r\nContent-Transfer-Encoding: binary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 7\r\n\r\nandroid\r\n--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb\r\nContent-Disposition: form-data; name="count"\r\nContent-Transfer-Encoding: binary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 1\r\n\r\n1\r\n--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb\r\nContent-Disposition: form-data; name="sms_hash"\r\nContent-Transfer-Encoding: binary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 15\r\n\r\n{msg}\r\n--f32dd0bf-ca26-4be6-9d71-5652a6eee3cb--\r\n'
-        esponse = requests.post('https://thekrishi.com/v2/otp/get', params=params, headers=headers,
+        esponse = requests.post('https://thekrishi.com/v2/otp/get', params=params,
                                  data=data)
         response = esponse.json()
         print(response)
